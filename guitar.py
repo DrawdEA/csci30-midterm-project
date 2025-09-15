@@ -21,7 +21,7 @@ if __name__ == '__main__':
     n_iters = 0
     while True:
         # it turns out that the bottleneck is in polling for key events
-        # for every iteration, so we'll do it less often, say every
+        # for every iteration, so we'll do it less often, say every 
         # 1000 or so iterations
         if n_iters == 1000:
             stdkeys.poll()

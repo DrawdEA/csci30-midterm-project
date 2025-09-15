@@ -37,6 +37,8 @@ class RingBuffer:
         Add item `x` to the end
         '''
         # TO-DO: implement this
+
+        # print("to enqueue: ", x, " rear: ", self._rear, " max: ", self.MAX_CAP)
         if (self.is_full()): raise RingBufferFull
         else:
             self.buffer[self._rear] = x

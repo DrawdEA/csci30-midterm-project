@@ -24,6 +24,7 @@ class GuitarString:
 
         stg.capacity = len(init)
         stg.buffer = RingBuffer(stg.capacity)
+        print("stg capacity: ", stg.capacity)
         for x in init:
             stg.buffer.enqueue(x)
         return stg
@@ -35,7 +36,7 @@ class GuitarString:
         # TO-DO: implement this
         for x in range(self.capacity):
             self.buffer.dequeue()
-            self.buffer.enqueue(random.uniform(-1/2, 1/2))
+            self.buffer.enqueue(0.996 * 1/2 * random.uniform(-0.5, 0.5))
         self.ticks = 0
 
     def tick(self):
@@ -45,8 +46,10 @@ class GuitarString:
         # TO-DO: implement this
         self.ticks +=1
         sample_1 = self.buffer.peek()
+        # print("tick s1: ", sample_1)
         self.buffer.dequeue()
         sample_2 = self.buffer.peek()
+        # print("tick s2: ", sample_2)
         average = ((sample_1 + sample_2)/2)*0.996
         self.buffer.enqueue(average)
 
