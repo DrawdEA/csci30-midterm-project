@@ -8,7 +8,7 @@ if __name__ == '__main__':
     # initialize window
     stdkeys.create_window()
 
-    PLAY_DURATION = 44100 * 2 # sampling rate * seconds to play each note
+    PLAY_DURATION = 44100 * 2 # sampling rate/second * 2 seconds to play each note
 
     keyboard = "q2we4r5ty7u8i9op-[=]"
     strings = []
