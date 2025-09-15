@@ -36,6 +36,7 @@ class GuitarString:
         for x in range(self.capacity):
             self.buffer.dequeue()
             self.buffer.enqueue(random.uniform(-1/2, 1/2))
+        self.ticks = 0
 
     def tick(self):
         '''
