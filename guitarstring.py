@@ -45,10 +45,10 @@ class GuitarString:
         # TO-DO: implement this
         self.ticks +=1
         sample_1 = self.buffer.peek()
-        print("tick s1: ", sample_1)
+        # print("tick s1: ", sample_1)
         self.buffer.dequeue()
         sample_2 = self.buffer.peek()
-        print("tick s2: ", sample_2)
+        # print("tick s2: ", sample_2)
         average = ((sample_1 + sample_2)/2)*0.996
         self.buffer.enqueue(average)
 

@@ -38,7 +38,7 @@ class RingBuffer:
         '''
         # TO-DO: implement this
 
-        print("to enqueue: ", x, " rear: ", self._rear, " max: ", self.MAX_CAP)
+        # print("to enqueue: ", x, " rear: ", self._rear, " max: ", self.MAX_CAP)
         if (self.is_full()): raise RingBufferFull
         else:
             self.buffer[self._rear] = x
@@ -49,10 +49,10 @@ class RingBuffer:
         Return and remove item from the front
         '''
         # TO-DO: implement this
-        print("to dequeue: ", self.buffer[self._front], " front: ", self._front, " max: ") # for debugging
+        # print("to dequeue: ", self.buffer[self._front], " front: ", self._front, " max: ") # for debugging
         if (self.is_empty()): raise RingBufferEmpty
         temp = self.buffer[self._front]
-        print("new front: ", self.buffer[self._front])
+        # print("new front: ", self.buffer[self._front])
         self._front = (self._front + 1) % (self.MAX_CAP + 1)
         return temp
 
