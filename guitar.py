@@ -8,7 +8,7 @@ if __name__ == '__main__':
     # initialize window
     stdkeys.create_window()
 
-    PLAY_DURATION = 44100 * 2 # sampling rate/second * 2 seconds to play each note
+    PLAY_DURATION = 44100 * 3 # sampling rate/second * 2 seconds to play each note
 
     keyboard = "q2we4r5ty7u8i9op-[=]"
     strings = []
@@ -37,12 +37,20 @@ if __name__ == '__main__':
 
                 if strings[index] not in active_strings:
                     active_strings.append(strings[index])
+                    print(active_strings)
+                    print("")
 
 
         # compute the superposition of samples
+        # and make sure sample stays within the
+        # bounds [-1, 1]
         sample = 0.0
         for string in active_strings:
             sample += string.sample()
+            if sample > 1:
+                sample = 1
+            if sample < -1:
+                sample = -1
 
         # play the sample on standard audio
         play_sample(sample)
