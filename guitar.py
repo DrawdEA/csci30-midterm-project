@@ -34,12 +34,8 @@ if __name__ == '__main__':
             if key in keyboard:
                 index = keyboard.index(key)
                 strings[index].pluck()
-
                 if strings[index] not in active_strings:
                     active_strings.append(strings[index])
-                    print(active_strings)
-                    print("")
-
 
         # compute the superposition of samples
         # and make sure sample stays within the
