@@ -53,7 +53,8 @@ if __name__ == '__main__':
                 sample = -1
 
         # play the sample on standard audio
-        play_sample(sample)
+        if len(active_strings) != 0:
+            play_sample(sample)
 
         # advance the simulation of each guitar string by one step
         # this utilizes a temporary active strings list to avoid modifying the list while iterating over it
