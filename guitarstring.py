@@ -1,3 +1,15 @@
+# We hereby attest to the truth of the following facts:
+#
+# We have not discussed the python code in our program with anyone
+# other than our instructor or the teaching assistants assigned to this course.
+#
+# We have not used python code obtained from another student, or
+# any other unauthorized source, whether modified or unmodified.
+#
+# If any python code or documentation used in our program was
+# obtained from another source, it has been clearly noted with citations in the
+# comments of our program.
+
 #!/usr/bin/env python3
 import random, math
 from ringbuffer import *
